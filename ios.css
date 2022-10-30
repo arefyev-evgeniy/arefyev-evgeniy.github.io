@@ -1,0 +1,188 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #010101;
+    --text: #ffffff;
+    --subtext: #a3a2a7;
+    --linktext: #0c79ff;
+    --underline: #313133;
+    --sectionbg: #1c1c1e;
+    --buttoncolor: #0c79ff;
+    --buttonbgcolor: #1c1c1e;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #d5e8ff;
+    --text: #000000;
+    --subtext: #7d7d7f;
+    --linktext: #0c79ff;
+    --underline: #dedede;
+    --sectionbg: #ffffff;
+    --buttoncolor: #0c79ff;
+    --buttonbgcolor: #ffffff;
+  }
+}
+
+body {
+  font-family: "Helvetica";
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  box-sizing: border-box;
+  margin: 40px 0 20px 0;
+  display: grid;
+  grid-template-areas:
+    "img title"
+    "img subtitile";
+  width: 320px;
+  column-gap: 20px;
+  row-gap: 10px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.header__avatar {
+  border-radius: 100%;
+  grid-area: img;
+  width: 1000px;
+  height: 1000px;
+}
+
+.header__title {
+  margin: 40px 60px 0px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.2;
+  font-family: "Roboto";
+  grid-area: title;
+  align-items: center;
+   white-space: nowrap;
+}
+
+.header__subtitle {
+  margin: -8px 60px 50px;
+  color: var(--subtext);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  
+  grid-area: subtitile;
+}
+
+.links {
+  width: 330px;
+  margin-bottom: 20px;
+}
+
+.links__header {
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0px 30px 15px;
+  font-family: "Roboto";
+}
+
+.links__container {
+  list-style-type: none;
+  background: var(--sectionbg);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 26px 10px;
+  gap: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.links__link,
+.links__title {
+  font-size: 14px;
+  font-size: 1.4;
+  align-items: center;
+}
+
+.links__link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 0px 10px;
+  gap: -5px;
+  border-bottom: 1px solid var(--underline);
+  width: 280px;
+}
+
+.links__link:last-child {
+  border-bottom: none;
+}
+
+.linsk__link,
+.links__link:visited {
+  text-decoration: none;
+  color: var(--linktext);
+}
+
+.links__title {
+  margin: 0;
+  min-width: 100px;
+  align-items: center;
+   white-space: nowrap;
+}
+
+footer {
+  margin: 0 0 40px 0;
+}
+.button-link {
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 320px;
+  background: var(--buttonbgcolor);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: var(--buttoncolor);  
+  text-decoration: none;
+
+}
+
+.linsk__link:hover {color: #58c54b;}
+.button-link:hover {background: #58c54b;}
+
+}
+
+.header__avatar {
+    display: inline-block;
+  width: 500px;
+}
+.header__avatar {
+    background: #000;  /* У блока, оборачивающего картинку при наведении будет просвечивать черный фон */
+    overflow: hidden;  /* Ограничиваем видиую область */
+}
+.header__avatar {
+    opacity: 1;
+    transition: opacity 124ms linear, transform 124ms linear;  /* Плавное изменение прозрачности и увеличения */
+  width: 150%;
+  height: auto;
+}
+.header__avatar:hover {
+    opacity: 0.8; /* Высветляем картинку, но она становится темнее, так как под ней черный фон */
+   
+

@@ -1,7 +1,7 @@
 /**/
 const button = document.querySelector('button');
 
-/* */
+/* */Главное не всё знать, а уметь гуглить и быстро находить информацию
 button.addEventListener('click', function() {
-	alert('+1000 к удаче :)')
+	alert('Главное не всё знать, а уметь гуглить и быстро находить информацию:)'
 })
